@@ -1,7 +1,7 @@
 import React from "react";
 import UserComp from "./UserComp";
 import TestComp from "./TestComp";
-import NavBar from "./NavBar";
+import NavBar from "../Components/NavBar";
 
 export default function MainUserView(){
     return(
