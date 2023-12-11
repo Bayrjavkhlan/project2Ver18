@@ -16,20 +16,27 @@ use Inertia\Inertia;
 |
 */
 
+// Route::get('/', function () {
+//     return Inertia::render('Welcome', [
+//         'canLogin' => Route::has('login'),
+//         'canRegister' => Route::has('register'),
+//         'laravelVersion' => Application::VERSION,
+//         'phpVersion' => PHP_VERSION,
+//     ]);
+// });
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+        return Inertia::render('Users/MainUserView');
 });
 
 Route::get('users',function(){
     return Inertia::render('Users/UserComp');
 });
-Route::get('main',function(){
-    return Inertia::render('Users/MainUserView');
+
+Route::get('register',function(){
+    return Inertia::render('Auth\Register.jsx');
+});
+Route::get('login',function(){
+    return Inertia::render('Auth\Login.jsx');
 });
 
 
