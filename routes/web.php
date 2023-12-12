@@ -36,7 +36,12 @@ Route::get('register',function(){
     return Inertia::render('Auth\Register.jsx');
 });
 Route::get('login',function(){
-    return Inertia::render('Auth\Login.jsx');
+    return Inertia::render('Auth/Login');
+});
+Route::get('worker',function(){
+    // return Inertia::render('Worker/WorkerLogin');
+    return Inertia::render('Auth/WorkerLogin');
+
 });
 
 
